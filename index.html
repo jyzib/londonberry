@@ -1,0 +1,1410 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"082da40fff","applicationID":"712665588","transactionName":"bgYANhZWWRcFUxdYWldMIzE0GFMBAlEWXUEXAhESHA==","queueTime":0,"applicationTime":57,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"082da40fff",applicationID:"712665588"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><meta name="GENERATOR" content="Martjack Multi-channel retailing solution" /><title>
+	Online Clothing Store for Men & Women in India | Numero Uno
+</title><meta id="ctl00_metakeywords" name="keywords" content="Men&#39;s Wears, Women&#39;s Wears" /><meta id="ctl00_metadescription" name="description" content="Numero Uno is your own Indian brand that offers men&#39;s and women&#39;s wear. Shop online from our exclusive collection of jeans, shirts, t shirts, jackets and many more | COD Available | Fast Delivery | Easy Exchange &amp; Return" /><meta http-equiv="x-dns-prefetch-control" content="on" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="dns-prefetch" href="//martjackstorage.blob.core.windows.net" /><link rel="dns-prefetch" href="//www.googletagmanager.com" /><link rel="dns-prefetch" href="//www.google-analytics.com" /><link rel="dns-prefetch" href="//bam.nr-data.net" /><link rel="dns-prefetch" href="//connect.facebook.net" />
+<link rel="dns-prefetch" href="https://assets.sg.content-cdn.io/script/Zone03" />
+<link rel="dns-prefetch" href="https://assets.sg.content-cdn.io/css" />
+<link rel="dns-prefetch" href="//images.sg.content-cdn.io/cdn" />
+
+<link rel="stylesheet" href="style.css">
+<link href="https://assets.sg.content-cdn.io/css/themes/mjt2012716/main_min.css?v=v1" rel="stylesheet" type="text/css" />
+<link href="https://storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Stylesheet/CustomStyles.css?v=v677" rel="stylesheet" type="text/css" />
+<!-- <link rel="icon" href="https://storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/favicon.ico" type="image/x-icon" /> -->
+<!-- <link rel="shortcut icon" href="https://storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/favicon.ico" type="image/x-icon" /> -->
+<meta name="google-site-verification" content="1hgV_cHC8UpbEjhQ7xSieP9ZlNmrftDwdUtwgLKyA0I" /><script type="text/javascript">MartJack ={"Config":{"MerchantId":"1665f289-f3fd-4844-a3ba-644cef519e51","st01_path":"https://assets.sg.content-cdn.io/script/Zone03","SiteUrlForControls":"https://","FilePaths":null,"IsProductCompare":"True","IsReview":"True","AppId":"","IsAutoComplete":"True","jsVersion":"v2297","InstalledApps":["Capillary Payment Gateway","ChimpJack","Recommendation","LocationAwareness","Localization","ERP_Integration_keys","IVR Integration"],"PublisherMerchantId":"1665f289-f3fd-4844-a3ba-644cef519e51","IsSecurePage":"false","LangCode":"en","LangSiteUrl":"https://","IsFacebookUser":"False","Channel":"W","ThemeURL":"https://assets.sg.content-cdn.io/css","Theme":"mjt2012716","IsLightWeightIntegration":"True","Analytics":{"GaProfileId":"UA-99004254-1","Ga4ProfileId":""},"Returnurl":"","GoogleClientID":"numero-login","GoogleAPIKey":"AIzaSyDxmnbU0evlt1MIvRT7CEISB42yMOo3T8k","IsGoogleUser":"False","IsResponsive":"True","CartOrientation":"H","IsQuickView":true,"NavigationType":"VC","DefaultShoppingListID":"657313","Culture":"en-IN","IsSSLEnabled":true,"ConversionFactor":1.0,"DynamicImagePath":"//storage.sg.content-cdn.io/cdn-cgi/image/{width},{height},quality=75,format=auto,fit=cover,g=top/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/ProductImages/Source","IsTwitterUser":"False","ResourceUrl":"https://storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51","JSLibUrl":"http://assets.sg.content-cdn.io/script/ZoneTP","CacheCart":true,"CachedCartTTL":1200000},"PageInfo":{"PageID":1472589,"PredefinedPageID":1,"PageTitle":"Online Clothing Store for Men & Women in India | Numero Uno","PageConfigType":"7","CategoryID":null,"CategoryName":null,"CategoryTree":null,"BrandID":null,"BrandName":null,"GroupID":null,"GroupName":null,"PostID":0,"ProductID":0,"ProductTitle":null,"Sku":null,"PackageQuantity":0,"ProductWeight":0.0,"ProductMrp":0.0,"WebPrice":0.0,"OfferText":null,"BlogId":0,"Variants":null,"PageType":"home","IsAvailable":false},"ProviderConfig":{"GoogleAddwords":{"RemarketingEnabled":null,"ConversionId":null,"ConversionLanguage":null,"ConversionFormat":null,"ConversionColor":null,"ConversionLabel":null,"ConversionValue":null,"IsRemarketingVariantLevel":null},"Tags":[],"TealiumTagManager":null},"WebNotifications":[],"Current":{"RequestTime":1696231386,"User":{"Email":null,"UserID":null,"FBProfileId":null,"GmailProfileID":null,"crm_externalid":null,"crm_uniqueid":null,"FirstName":null,"LastName":null,"MobileNo":null,"UserEmail":null,"UserIP":"103.237.175.20","HashKey":null,"SignedUpDate":null},"Cart":[],"Location":{"LocationId":0,"LocationCode":null,"LocationName":null,"City":null,"Country":null},"CurrencySymbol":"<span class=\"sp_currencysyb WebRupee\">INR </span><span class=\"sp_amt\"></span>","CurrencyCode":"INR","OrderId":0,"OrderTotal":0.0,"CartSubTotal":0.0,"CheckoutType":null,"ActualShippingCost":0.0,"TaxTotal":0.0,"BillEmail":null,"OrderStatus":null,"Source":null,"DeliveryMode":"","utm_source":"","utm_medium":"","utm_campaign":"","IsOrderTrack":false,"utm_content":"","BillTotal":0.0,"DiscountAmount":0.0,"CouponCode":null,"CouponMessage":null,"OrderItems":[],"MerchantDefaultLocationID":0,"IsInvokeLocationPopup":false,"UserID":"00000000-0000-0000-0000-000000000000","IsGuestUser":false},"WidgetSettings":"","Apps":{"Capillary":{"IsAwesomeBar":"False","OrgID":"2123"}},"StandardUrlMap":{"search":"SearchResults.aspx","home":"Default.aspx","product":"ProductDetails.aspx","_ShowCategory":"ShowCategory.aspx","registration":"Registration/UserRegistration.aspx","cart":"Cart.aspx","login":"Registration/Login.aspx","returnpage":"Retpage.aspx","storemap":"StoreMap.aspx","createcoupon":"CreateCoupon.aspx","searchproduct":"SearchProduct.aspx","sitemap":"Sitemap.aspx","rss":"RSSFeed.aspx","kiosk-default":"KIOSK/Default.aspx","kiosk-catalog":"KIOSK/KIOSKHomePage.aspx","kiosk-search":"KIOSK/KioskRefineSearch.aspx","kiosk-product":"KIOSK/ProductList.aspx","addressdetails":"AddressDetails.aspx","payment":"Payment.aspx","searchresult":"SearchResults.aspx?Search=*","showbrand":"BrandPage.aspx","searchsummary":"SearchResults.aspx?Search=*&multi=true","trackorder":"TrackOrder.aspx","useractivation":"Registration/UserActivation.aspx","checkout":"SinglePageCheckout.aspx","pagenotfound":"PageNotFound.aspx","myaccount":"Registration/MyAccount.aspx","setpassword":"Registration/SetPassword.aspx","post":"Registration/Post.aspx"}}</script><script src="https://assets.sg.content-cdn.io/script/Zone03/js/Lib/MJ_Static-Built.js?v=v2297" type="text/javascript"></script><link rel="canonical" href="https://www.numerounojeanswear.com/" /></head>
+<style>
+    #header {
+    background: #011722;
+    height: 91px;
+}
+.tabsmenwomen{
+    display: none;
+}
+.footer-wrapper, .popcont, .copy-content {
+    background: #011722;
+}
+
+.mobile_cart_top {
+    background: #011722;
+}
+img.logo.new-logo {
+    width: 200px;
+    height: auto !important;
+}
+</style>
+<body class="home">
+
+<noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5F976QT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+<script type="text/javascript">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-5F976QT');
+        </script>
+
+<script type="text/javascript">
+            var DynamicModules = [];
+    </script>
+<script>MartJack.WidgetSettings.ProductDetails.IsQuickAdd='true';MartJack.WidgetSettings.
+Jval.ShowErrorSummary="true";MartJack.WidgetSettings.
+Jval.StyleType = "callout"; </script><script type="text/javascript" src="https://assets.sg.content-cdn.io/script/Zone03/js/Common-Built.js?v=v2297"></script>
+
+<div id="fb-root"></div>
+<script type="text/javascript">
+        var page = '';
+        var Varable_Slider = '';
+        var Varable_Scroller = '';
+        var blnIsFacebookUser = 'False';
+        var CartJson = '';
+        var CartItemCount = '0';
+        $(document).ready(function () {
+            if (CartItemCount != "0") {
+                require(['Plugins/Taffy-Min']);
+                require(['App/Widgets/CartControlBase'], function () {
+                    CartControlBase.UpdateCartItemsCount(true, CartJson);
+            });
+            }
+        });
+        $(window).load(function () {
+            var Searchele = "input[id$=txtSearch]";
+            if (typeof MartJack.Apps.Tagalys != "undefined" && $(".tagalys-search").length > 0) {
+                if (MartJack.Config.IsResponsive == 'True') {
+                    require(['Plugins/Foundation'], function () {
+                        $(document).foundation();
+                        if (Foundation.utils.is_medium_only() == true || Foundation.utils.is_small_only() == true) {
+                            Searchele = "input[id$=txtSearch_mobile]";
+                        }
+                    });
+                }
+                require(['Plugins/tagalys', 'App/Widgets/TagalysSearch'], function () {
+                    TagalysWidget.init_tagalys();
+                    TagalysWidget.tagalys_search(Searchele);
+                });
+            }
+            if (typeof MartJack.Apps.Tagalys != "undefined") {
+                require(['App/Widgets/TagalysTracking'], function () {
+                    TagalysTrack.init_tagalystrack();
+                });
+            }
+        });
+		
+        function openSubcriptionContent(evt, cityName) {
+		
+			require(['Lib/jQuery-UI-DatePicker'], function () {});
+			
+			BindDatePicker('txtDsubfromDate');
+			BindDatePicker('txtWsubfromDate');
+			BindDatePicker('txtAsubfromDate');
+			BindDatePicker('txtMsubfromDate');
+			BindDatePicker('txtDsubToDate');
+			BindDatePicker('txtAsubToDate');
+			BindDatePicker('txtWsubToDate');
+			BindDatePicker('txtMsubToDate');
+			
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "block";
+			if(evt != undefined)
+			{
+				evt.currentTarget.className += " active";
+			}
+        }
+		
+		function BindDatePicker(ElementId) {
+            $("#" + ElementId + "").datepicker({
+                changeMonth: true,
+				changeYear: true,
+				dateFormat: "dd-M-y",
+				minDate:0
+            });
+        }
+
+    </script>
+<form name="form1" method="post" action="/?gad=1&amp;gclid=Cj0KCQjw1OmoBhDXARIsAAAYGSHEhMDNM8gmFYGnLRBDGY1uG7q_XB7xvD6DCYPkE3Qt2TqOMErVNH4aAjz4EALw_wcB" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="QquR+fPNg5eEqWBuUG0bhMCTSprlmxTuFgsgCY5bfkBMFJ4Dx+qGD0RmLmPB2jpgMQlsTg==" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+<div>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+<input type="hidden" name="ctl00$hdnAntiforgery" id="hdnAntiforgery" value="390bd7cc-9583-416c-a872-1505ec556146" />
+<div class="tagalys-namespace" id="tagalys-namespace" style="display:none"></div>
+<div class="body_parentdiv off-canvas-wrap" data-offcanvas>
+<center>
+<div id="maindL" class="inner-wrap" style="position: relative; width: 100%;">
+<div id="maindR" style="position: relative; width: 100%;">
+<center>
+<div class="main" id="innerwrap" style="width: 100%;">
+<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+<link rel="alternate" href="https://www.numerounojeanswear.com/mens-acid-blue-slim-jeans/p/18425253/15567575" hreflang="en-IN" />
+<div class="test-url" style="display: none">http://www.numerounojeanswear.com/mens-acid-blue-slim-jeans/p/18425253/15567575 / /mens-acid-blue-slim-jeans/p/18425253/15567575 / https:///mens-acid-blue-slim-jeans/p/18425253/15567575 //mens-acid-blue-slim-jeans/p/18425253/15567575 /</div>
+
+<div id="headersectiondiv">
+<div class="header-sec-main">
+<div id="header">
+<div class="top-bar">
+<div class="top-bar-wrapper">
+<div class="right-section">
+
+<a href="/store-locator" class="find-a-store">find a store</a>
+</div>
+</div>
+</div>
+<div class="header-wrapper ">
+<div id="searchmain" class="searchbarbg_r">
+<div class="searchbarbg_l">
+<div id="searchbar" class="srachleft_div">
+<div onKeyPress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_Searchbox_btnSearch')" class="srachright_div FormSection" id="ctl00_Searchbox_Panelsearch">
+<div class="searchtxtdiv">
+<label>Search :</label>
+<span>
+<input keypress-bind="true" autocomplete="off" name="txtSearch" value="Search for product name" maxlength="582" id="txtSearch" class="searchtext ac_input" type="text">
+</span>
+<span class="searchdropdown" id="ddlSearchTree" style="display: inline;">
+<input name="txtSearchTree" value="All Categories" id="txtSearchTree" disabled="disabled" class="treetxtbox" type="text">
+<span class="searchdropdownstyle" id="imgDdl"></span></span>
+<div id="SearchTree" style="display: none;"></div>
+</div>
+<div class="searchbutton">
+<div class="navbtn">
+<span class="navbtn_l"></span><span class="navbtn_m">
+<input name="btnSearch" value id="btnSearch" class="mj_btnbg FormSectionDefaultButton" type="submit" onClick="searchPixel();">
+</span><span class="navbtn_r"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="search-close"></a>
+</div>
+<div class="logo">
+<a href="/">
+<h2>
+<img src="./logo.png" class="logo new-logo" width="auto" height="60" alt="londonberry" title />
+</h2>
+</a>
+</div>
+<div id="nav">
+<div class="nav_main_right" id="strDivmain" runat="server"><div class="nav_main_left"><ul id="sample-menu-2" class="sf-menu">
+
+
+<div class="l2_wrapper w190">
+<div class="l2_inner">
+<ul class="l2_inner_ul">
+<li class="l2">
+<a class="style1 secondlvlmenu" href="https:///new-arrivals">New Arrivals</a>
+<div class="cols last_col">
+</div>
+</li>
+<li class="l2">
+<a class=" secondlvlmenu" href="https:///men/jeans">Jeans</a>
+<div class="cols last_col">
+</div>
+</li>
+<li class="l2">
+<a class=" secondlvlmenu" href="https:///men/shirts">Shirts</a>
+<div class="cols last_col">
+</div>
+</li>
+<li class="l2">
+<a class=" secondlvlmenu" href="https:///men/t-shirts">T-shirts</a>
+<div class="cols last_col">
+</div>
+</li>
+<li class="l2">
+<a class=" secondlvlmenu" href="https:///men/trousers">Trousers</a>
+<div class="cols last_col">
+</div>
+</li>
+<li class="l2">
+<a class=" secondlvlmenu" href="https:///men/sweatshirts">Sweatshirts</a>
+<div class="cols last_col">
+</div>
+</li>
+<li class="l2">
+<a class=" secondlvlmenu" href="https:///men/knit-sweaters">Knit & Sweaters</a>
+<div class="cols last_col">
+</div>
+</li>
+<li class="l2">
+<a class=" secondlvlmenu" href="https:///men/waistcoats">Waistcoats</a>
+<div class="cols last_col">
+</div>
+</li>
+<li class="l2">
+<a class=" secondlvlmenu" href="https:///men/jackets">Jackets</a>
+<div class="cols last_col">
+</div>
+</li>
+<li class="l2">
+<a class=" secondlvlmenu" href="https:///men/activewear">Active wear</a>
+<div class="cols last_col">
+</div>
+</li>
+<li class="l2">
+<a class=" secondlvlmenu" href="https:///sale">Sale</a>
+<div class="cols last_col">
+</div>
+</li>
+</ul></div></div>
+</li>
+
+<div class="l2_wrapper w190">
+<div class="l2_inner">
+<ul class="l2_inner_ul">
+<li class="l2">
+<a class="style1 secondlvlmenu" href="https:///women-new-arrivals">NEW ARRIVALS</a>
+<div class="cols last_col">
+</div>
+</li>
+<li class="l2">
+<a class=" secondlvlmenu" href="https:///women/jeans">Jeans</a>
+<div class="cols last_col">
+</div>
+</li>
+<li class="l2">
+<a class=" secondlvlmenu" href="https:///women/shirts">Shirts</a>
+<div class="cols last_col">
+</div>
+</li>
+<li class="l2">
+<a class=" secondlvlmenu" href="https:///women/t-shirts">T-shirts</a>
+<div class="cols last_col">
+</div>
+</li>
+<li class="l2">
+<a class=" secondlvlmenu" href="https:///women-sale">Sale</a>
+<div class="cols last_col">
+</div>
+</li>
+</ul></div></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="right-col">
+<!-- <div class="jointroops"><a href="/join-nu-troops">Join NU Troops</a></div> -->
+<div class="search-bar">
+<a class="searchbtn">Search</a>
+</div>
+<div class="wishlist">
+<a href="/Registration/MyAccount.aspx?tabkey=Wishlist" class="wishlist-lnk">Wishlist</a>
+</div>
+<div class="user">
+<div id="myaccount">
+<h2 class="heading"><a href="#!">Welcome</a></h2>
+<p>To access account and manage orders</p>
+<div class="button-group">
+<a href="https:///Registration/Login.aspx?ReturnUrl=https://" class="loginlnk signin "> Login </a>
+<span class="sep">/</span>
+<a href="https:///Registration/UserRegistration.aspx?ReturnUrl=https://" class="loginlnk signup ">Sign Up </a>
+</div>
+</div>
+</div>
+<div class="cart">
+<div class="cartdetails_div dontscrollonaddtocart" style="display:none;">
+<a href="#" class="show_quickview"></a>
+<div class="divbtncomparision" id="dvcomparision" runat="server"><a href="javascript:showDiv();" class="navbtn"><span class="navbtn_l"></span><span class="navbtn_m">Compare</span><span class="navbtn_r"></span></a></div>
+<div class="cartdetailsinfo">
+<div style="padding-right: 2px;" class="cartitemdetails">
+<label class="cartitem_text HasItems">Your Cart</label>
+<label class="cartitem_number HasItems"></label>
+<label class="lblEmptyBskt NoItems">Your Cart<span class="iswnewcart">0</span></label>
+</div>
+<div style="padding-right: 2px;" class="cartbtn_div HasItems">
+<div class="cart_btn"><a class="buttonlnk" href="/Cart.aspx">View Cart</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="getextra-purchse">
+<p></div>
+</div>
+<div class="mobileonly" id="mobilesection">
+<div class="fixed" id="dockedHeader">
+<div class="mobile_cart_top">
+<div class="mobile_cart_top_left">
+<div class="nav_icon_bg"><a class="left-off-canvas-toggle nav-btn" href="#"></a></div>
+</div>
+<div class="mobile_cart_top_center"><a href="/">
+<img width="177" height="33" src="./logo.png" class="mobile-logo new-logo" alt="numerounojeanswear" title=" ">
+</a></div>
+<div class="mobile_cart_top_right">
+<div class="search_icon_bg">
+<a class="search_icon_mobile_toggle">
+</a>
+<div id="searchmain" class="searchbarbg_r">
+<div class="searchbarbg_l">
+<div id="searchbar" class="srachleft_div">
+<div onKeyPress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_Searchbox_btnSearch')" class="srachright_div FormSection" id="ctl00_Searchbox_Panelsearch">
+<div class="searchtxtdiv">
+<label>Search :</label>
+<span>
+<input keypress-bind="true" autocomplete="off" name="txtSearch" placeholder="Search for product name" maxlength="582" id="txtSearch_mobile" class="searchtext ac_input" type="search" style="width:50%;">
+</span>
+<span class="searchdropdown" id="ddlSearchTreemb" style="display: inline;">
+<input name="txtSearchTree" value="All Categories" id="txtSearchTree" disabled="disabled" class="treetxtbox" type="text">
+<span class="searchdropdownstyle" id="imgDdl"></span></span>
+<div id="SearchTree" style="display: none;"></div>
+</div>
+<div class="searchbutton" style="position:static">
+<div class="navbtn">
+<span class="navbtn_l"></span><span class="navbtn_m">
+<input name="btnSearch" value id="btnSearch" class="mj_btnbg responsivesearch FormSectionDefaultButton" type="submit">
+</span><span class="navbtn_r"></span>
+</div>
+</div>
+</div>
+<a class="m-search-close"></a>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li class="custom_mobile_cart">
+<a class="cart-control right-off-canvas-toggle1" href="/cart.aspx"></a>
+<div class="cartitems">
+<span class="cartitem_number"></span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mobile-cart-notification" id="cartnotification" data-timetoclose="5000" style="display:none">
+<span class="arrow"></span>
+<div class="cart-title" id="title">Product has been added to your bag. <span class="close"></span></div>
+<div class="cart-items">
+<div id="productimage" class="product-image"><img src alt="product-image"></div>
+<div class="product-details">
+<div id="producttitle" class="product-title"></div>
+<div id="vdesc" class="product-varient"></div>
+<div class="product-price">
+<span class="sp_currencysyb WebRupee">INR </span> <span class="sp_amt" id="productprice"></span>
+</div>
+</div>
+<div id="responsive-cartbuttons" class="cart-buttons">
+<a class="pay-btn" href="/cart.aspx"><span class="navbtn_l">&nbsp;</span><span class="navbtn_m">View Cart</span><span class="navbtn_r">&nbsp;</span></a>
+
+<a class="byn-addmore" href="https://">Continue Shopping</a>
+</div>
+</div>
+</div>
+<div class="mobile-navigation left-off-canvas-menu">
+<div class="row">
+<div class="small-12 columns">
+<div class="xs-hd-tp">
+Menu
+<div class="offC-close exit-off-canvas"><span>X</span></div>
+</div>
+<div class="mobile-nav">
+<div class="accordion">
+<h2><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Men _M" href="https:///men" target="_self">Men </a> </h2>
+<div class="pane">
+<ul class="m-nav">
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Men New Arrivals  _M" target="_self" href="https:///new-arrivals">New Arrivals </a> </li>
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Men New Arrivals Jeans  _M" target="_self" href="https:///men/jeans">Jeans </a> </li>
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Men New Arrivals Jeans Shirts  _M" target="_self" href="https:///men/shirts">Shirts </a> </li>
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Men New Arrivals Jeans Shirts T-shirts  _M" target="_self" href="https:///men/t-shirts">T-shirts </a> </li>
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Men New Arrivals Jeans Shirts T-shirts Trousers  _M" target="_self" href="https:///men/trousers">Trousers </a> </li>
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Men New Arrivals Jeans Shirts T-shirts Trousers SWEATSHIRTS  _M" target="_self" href="https:///men/sweatshirts">SWEATSHIRTS </a> </li>
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Men New Arrivals Jeans Shirts T-shirts Trousers SWEATSHIRTS Knit & Sweaters  _M" target="_self" href="https:///men/knit-sweaters">Knit & Sweaters </a> </li>
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Men New Arrivals Jeans Shirts T-shirts Trousers SWEATSHIRTS Knit & Sweaters Waistcoats  _M" target="_self" href="https:///men/waistcoats">Waistcoats </a> </li>
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Men New Arrivals Jeans Shirts T-shirts Trousers SWEATSHIRTS Knit & Sweaters Waistcoats Jackets  _M" target="_self" href="https:///men/jackets">Jackets </a> </li>
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Men New Arrivals Jeans Shirts T-shirts Trousers SWEATSHIRTS Knit & Sweaters Waistcoats Jackets Active wear  _M" target="_self" href="https:///men/activewear">Active wear </a> </li>
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Men New Arrivals Jeans Shirts T-shirts Trousers SWEATSHIRTS Knit & Sweaters Waistcoats Jackets Active wear Sale  _M" target="_self" href="https:///sale">Sale </a> </li>
+</ul>
+</div>
+<h2><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Women _M" href="https:///women" target="_self">Women </a> </h2>
+<div class="pane">
+<ul class="m-nav">
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Women New Arrivals  _M" target="_self" href="https:///women-new-arrivals">New Arrivals </a> </li>
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Women New Arrivals Jeans  _M" target="_self" href="https:///women/jeans">Jeans </a> </li>
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Women New Arrivals Jeans Shirt  _M" target="_self" href="https:///women/shirts">Shirt </a> </li>
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Women New Arrivals Jeans Shirt T-shirt  _M" target="_self" href="https:///women/t-shirts">T-shirt </a> </li>
+<li><a class="DL-CustomEvent no-subnav" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Women New Arrivals Jeans Shirt T-shirt Sale  _M" target="_self" href="https:///women-sale">Sale </a> </li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="mobile-sub-nav">
+<ul>
+<li><a href="/about-us">About us</a></li>
+<li><a href="/store-locator">Store Locator</a></li>
+<li><a href="https:///Registration/MyAccount.aspx?tabkey=Wishlist" class="loginlnk mywishlist">Wishlist</a></li>
+<li><a href="/trackorder.aspx" class="loginlnk mywishlist">Track Order</a></li>
+<li><a href="/join-nu-troops">Join NU Troop</a></li>
+<li>
+<a href="https:///Registration/Login.aspx?" class="loginlnk "> Sign in </a>
+<span class="sep">/</span>
+<a href="https:///Registration/UserRegistration.aspx?ReturnUrl=https://" class="loginlnk signup ">Sign up</a>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+<a class="canvas-close-btn"></a>
+</div>
+<div class="mobile-cart right-off-canvas-menu">
+<a class="cart-canvas-close-btn"></a>
+</div>
+</div>
+<script type="text/javascript">
+   $(document).ready(function(){
+       $('.search_icon_mobile_toggle').unbind('click').click(function(){
+           $('#mobilesection #searchmain').toggle();
+		  $("body").toggleClass("no-scroll");
+           if($('.tagalys-search').length == 0){
+               $('.searchbarbg_l .searchtext').focus();
+           } else {
+               $('.searchmain').focus();
+           }
+       })
+	   $(".m-search-close").click(function() {
+          $('#mobilesection #searchmain').hide();
+		  $("body").removeClass("no-scroll");
+       })
+	   
+       $(".left-off-canvas-toggle").click(function() {
+           $(".canvas-close-btn").css("display","block");
+           $(".left-off-canvas-toggle").css("display","none");
+       })
+       $(".exit-off-canvas").click(function() {
+           $(".canvas-close-btn").css("display","none");
+           $(".left-off-canvas-toggle").css("display","block");
+           $(".custom_mobile_cart").css("display","block");
+       })
+       $(".canvas-close-btn").click(function() {
+           $(".body_parentdiv").removeClass("move-right");
+           $(".left-off-canvas-toggle").css("display","block");
+           $(".canvas-close-btn").css("display","none");
+       })
+       $(".custom_mobile_cart").click(function() {
+           $(".cart-canvas-close-btn").css("display","block");
+       })
+   })
+ $(".loc_pizuna").click(function () {
+	$(".location-list").toggle();
+});  
+   
+</script>
+
+<script>
+if(MartJack.Current.User.Email == null) {
+    dataLayer.push({ ecommerce: null });
+    dataLayer.push({
+        event: "guestUser",
+        eventCategory: "Guest User",
+        eventAction: "UserGuest",
+        eventLabel: MartJack.PageInfo.PageType,
+        
+    });
+} else {
+    dataLayer.push({ ecommerce: null });
+    dataLayer.push({
+        event: "loggedinUser",
+        eventCategory: "Logged In User",
+        eventAction: "UserRegistered",
+        eventLabel: MartJack.PageInfo.PageType,
+        ecommerce: {
+            userData: {
+                firstName: MartJack.Current.User.FirstName
+            }
+        }
+    });
+}
+
+</script>
+<script>
+	var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+var yy = today.getFullYear();
+
+today = yy + '-' + mm + '-' + dd;
+
+if(MartJack.Current.User.SignedUpDate == today)
+{
+	
+	dataLayer.push({ ecommerce: null });
+    dataLayer.push({
+        event: "newUser",
+        eventCategory: "newUser",
+        eventAction: "newUser",
+        eventLabel: "newUser",
+        ecommerce: {
+            userData: {
+				Userid: MartJack.Current.User.UserID,
+				Username:MartJack.Current.User.Email,				
+                firstName: MartJack.Current.User.FirstName,
+				LastName:  MartJack.Current.User.LastName,
+				PhoneNumber:MartJack.Current.User.MobileNo,
+				EmailId:MartJack.Current.User.UserEmail,
+            }
+        }
+    });	
+}
+	
+	
+	</script>
+
+<script>
+	
+    function userLogout() { 
+	
+    dataLayer.push({ ecommerce: null }); 
+    dataLayer.push({ 
+        event: "userLogout", 
+       eventCategory: "userLogout",
+       eventAction: "userLogout",
+       eventLabel: "userLogout", 
+        ecommerce: {
+           userData: {
+                Userid: MartJack.Current.User.UserID,
+               Username:MartJack.Current.User.Email,				 
+                               firstName: MartJack.Current.User.FirstName, 
+               LastName:  MartJack.Current.User.LastName, 
+               PhoneNumber:MartJack.Current.User.MobileNo,
+                EmailId:MartJack.Current.User.UserEmail, 
+          }
+       } 
+     });	 
+} 
+        </script>
+<a id="ctl00_lnk" href="javascript:__doPostBack(&#39;ctl00$lnk&#39;,&#39;&#39;)"></a>
+<a id="ctl00_LinkButton1" class="cp_displayHidden" href="javascript:__doPostBack(&#39;ctl00$LinkButton1&#39;,&#39;&#39;)"></a>
+<div id="main" class>
+<div id>
+</div>
+<div style="width:100%;">
+<div class="col1_T04">
+<div id="ctl00_ContentPlaceHolder1_ctl00_Pane1" class="col1_content_T04" style="width:100%">
+<div class="container_nopadding">
+<div class="controlcontent_r">
+<div class="htmlbucket">
+<p>
+
+<style type="text/css">.tabsmenwomen{
+    width:100%;
+    height:auto;
+    margin:0 auto;
+}
+
+/* tab list item */
+.tabsmenwomen .tabsmenwomen-list{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+.tabsmenwomen .tabsmenwomen-list li {
+	width: 50%;
+	float: left;
+	margin: 0px;
+	margin-right: 0;
+	padding: 0;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 0;
+	height: 38px;
+	line-height: 38px;
+}
+.tabsmenwomen .tabsmenwomen-list li:hover{
+    cursor:pointer;
+}
+.tabsmenwomen .tabsmenwomen-list li a {
+	text-decoration: none;
+	color: #1f1f1f;
+	text-transform: uppercase;
+	font-size: 14px;display: block;
+}
+.tabsmenwomen .tabsmenwomen-list li.active a {
+	color: #fff;
+}
+/* Tab content section */
+.tabsmenwomen .tab {
+	display: none;
+	width: 100%;
+	min-height: 100px;
+	height: auto;
+	border-radius: 0;
+	padding: 0px;
+	background-color: #fff;
+	color: #1f1f1f;
+	clear: both;
+}
+.tabsmenwomen .tab p{
+    line-height:20px;
+    letter-spacing: 1px;
+}
+
+/* When active state */
+.active{
+    display:block !important;
+}
+.tabsmenwomen .tabsmenwomen-list li.active {
+	background-color: #0068b4 !important;
+	color: #fff !important;
+}
+.tabsmenwomen .tabsmenwomen-list li {background:#20285E;}
+.tabsmenwomen .tabsmenwomen-list li a {color:#fff;}
+.tabsmenwomen .tabsmenwomen-list li.active {background-color: #fff !important;}
+.tabsmenwomen .tabsmenwomen-list li.active a {color: #000;}
+</style>
+<div class="tabsmenwomen">
+<ul class="tabsmenwomen-list">
+<li class="active"><a href="/men">men</a></li>
+<li><a href="/women">women</a></li>
+</ul>
+<div class="tab active" id="tab1men">
+<div class="mobile-home-subnav"><a class="style1" href="/new-arrivals"><img alt="New Arrivals" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/new-arrivals-17april.jpg" /> <span>New Arrivals</span> </a> <a href="/best-deals"><img alt="Best Deals" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/best-deals-17april.jpg" /> <span>Best Deals</span> </a> <a href="/online-exclusives"><img alt="Online Exclusives" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/online-exclusives-17april.jpg" /> <span>Online Exclusives</span> </a> <a href="/men/jeans"><img alt="Jeans" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/Men-cat-home-jeans.jpg" /> <span>Jeans</span> </a> <a href="/men/shirts"><img alt="Shirts" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/Men-cat-home-shirt.jpg" /> <span>Shirts</span> </a> <a href="/men/t-shirts"><img alt="T-shirts" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/Men-cat-home-t-shirt.jpg" /> <span>T-shirts</span> </a> <a href="/men/trousers"><img alt="Trousers" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/Men-cat-home-trouser.jpg" /> <span>Trousers</span> </a> <a href="/men/sweatshirts"><img alt="Sweatshirts" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/Men-cat-home-sweatshirt.jpg" /> <span>Sweatshirts</span> </a> <a href="/men/knit-sweaters"><img alt="KNITS &amp; SWEATERS" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/Men-cat-home-sweater.jpg" /> <span>KNITS & SWEATERS</span> </a> <a href="/men/waistcoats"><img alt="Waistcoats" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/Men-cat-home-waistcoat.jpg" /> <span>Waistcoats</span> </a> <a href="/men/jackets"><img alt="Jackets" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/Men-cat-home-jacket.jpg" /> <span>Jackets</span> </a></div>
+</div>
+<div class="tab" id="tab2women">
+<div class="mobile-home-subnav"><a class="style1" href="/new-arrivals"><img alt="New Arrivals" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/Men_newarrival-collection-banner_01.jpg" /> <span>New Arrivals</span> </a> <a href="https:///best-deals?Rfs=attrZZCU00397933-016VPYQCU00397933-016-2"><img alt="Best Deals" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/Men_bestdeal-collection-banner02.jpg" /> <span>Best Deals</span> </a> <a href="/online-exclusives"><img alt="Online Exclusives" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/Men_onlineexclusive-collection-banner03.jpg" /> <span>Online Exclusives</span> </a> <a href="/women/shirts"><img alt="shirts" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/Women_cat-shirt.jpg" /> <span>shirts</span> </a> <a href="/women/sweatshirts"><img alt="sweatshirts" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/Women_cat-sweatshirt.jpg" /> <span>sweatshirts</span> </a> <a href="/women/knit-sweaters"><img alt="sweaters" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/Women_cat-sweater.jpg" /> <span>sweaters</span> </a></div>
+</div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url":"https:///",
+  "potentialAction": {
+   "@type": "SearchAction",
+   "target": "https:///SearchResults.aspx?search={search_term_string}",
+   "query": "required",
+   "query-input":"required name=search_term_string"
+   }
+ }
+</script><script type="application/ld+json">
+    {
+     "@context" : "https://schema.org",
+        "@type" : "Organization",
+        "Name" : "NUMERO UNO CLOTHING LTD.",
+        "URL" : "https:///",
+        "contactPoint" : [{
+         "@type" : "ContactPoint",
+         "telephone" : "+91 124-455522",
+         "contactType" : "Customer Service"
+        }],
+        "logo" : "https://storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/Numero-logo.svg",
+        "sameAs" : [
+         "https://twitter.com/numerounojw?lang=en",
+         "https://www.facebook.com/numerounojeanswear",
+         "https://www.instagram.com/numerounojeanswear/"                   
+        ]
+    }
+</script>
+<p></p>
+</p>
+</div>
+</div>
+<div class="r_bottom">
+<div class="l_bottom">
+</div>
+</div>
+</div>
+<div class="container_nopadding">
+<div class="controlcontent_r">
+<div class="htmlbucket">
+<p>
+<script defer src="//martjackassets.blob.core.windows.net/script/ZoneTP/jquery.flexslider-min.js"></script>
+<div class="video-wrapper1 hero-banner">
+<div class="video-left1" style="margin:0; float:none;">
+<div class="slider">
+<div class="flexslider hero-slider">
+<ul class="slides">
+<li><a href="/new-arrivals?trkbanner=nu-25-sep"><picture alt="nu-25-sep"> <source media="(max-width: 749px)" srcset="./mobile1.png" style="max-width: 100%;height: auto;" /> <img alt="1-nu-mob-25-sepp" src="./slider1.png" style="height:auto;" width="2560" /> </picture></a></li>
+<li><a href="#"><picture alt="aw-23-mob-25-sep"> <source media="(max-width: 749px)" srcset="./mobile2.png" style="max-width: 100%;height: auto;" /> <img alt="aw-23-mob-25-sep" src="slider2.png" style="height:auto;" width="2560" /> </picture></a></li>
+<li><a href="/men/jeans?trkbanner=denims-25-sep"><picture alt="denims-25-sep"> <source media="(max-width: 749px)" srcset="./mobile3.png" style="max-width: 100%;height: auto;" /> <img alt="denims-25-sep" src="./slider3.png" style="height:auto;" width="2560" /> </picture></a></li>
+<li><a href="/sale?trkbanner=sale-25-sep"><picture alt="sale-25-sep"> <source media="(max-width: 749px)" srcset="./mobile4.png" style="max-width: 100%;height: auto;" /> <img alt="sale-25-sep" src="./slider4.png" style="height:auto;" width="2560" /> </picture></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+	  $('.hero-slider').flexslider({
+		animation: "slide",
+		slideshowSpeed:5000 ,
+		animationSpeed: 600,
+		start: function(slider){
+		  $('body').removeClass('loading');
+		}
+	  });
+
+   });	
+</script>
+<p></p>
+</p>
+</div>
+</div>
+<div class="r_bottom">
+<div class="l_bottom">
+</div>
+</div>
+</div>
+<div class="container_nopadding">
+<div class="controlcontent_r">
+<div class="htmlbucket">
+<p>
+<div class="home-widget category-widget">
+<div class="widget-wrapper">
+<h1 class="heading">Say Hello to Our New Collection</h1>
+<div class="category-group">
+<div class="category-bucket"><a href="/new-arrivals"><img alt="New Arrivals" src="./newarrival.png" /> <span class="category-caption">New Arrivals</span> </a></div>
+<div class="category-bucket"><a href="/best-deals"><img alt="Best Deals" src="./newarrival1.png" /> <span class="category-caption">Best Deals</span> </a></div>
+<div class="category-bucket"><a href="/online-exclusives"><img alt="Online Exclusives" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/online-exclusives-25sep.jpg" /> <span class="category-caption">Online Exclusives</span> </a></div>
+</div>
+</div>
+</div>
+</p>
+</div>
+</div>
+<div class="r_bottom">
+<div class="l_bottom">
+</div>
+</div>
+</div>
+<div class="container_nopadding">
+<div class="controlcontent_r">
+<div class="htmlbucket">
+<p>
+<div class="home-widget featured-widget">
+<div class="widget-wrapper">
+<picture> <source media="(max-width: 749px)" srcset="./BANNER.png" style="max-width: 100%;width:100%;height: auto;" /> <img alt="Jim Sarbh Exclusive" src="./BANNER.png" style="height:auto;width:100%;" /> </picture>
+</div>
+</div>
+</p>
+</div>
+</div>
+<div class="r_bottom">
+<div class="l_bottom">
+</div>
+</div>
+</div>
+<div class="container_nopadding">
+<div class="controlcontent_r">
+<div class="htmlbucket">
+<p>
+<div class="home-widget category-widget categories">
+<div class="widget-wrapper">
+<h2 class="heading">CHOOSE A CATEGORY</h2>
+
+<div class="category-group btm-sec">
+<div class="category-bucket"><a href="/men/jackets"><img alt="Jackets" src="jacket.png" /> <span class="category-caption">Jackets</span> </a></div>
+<div class="category-bucket"><a href="/men/jeans"><img alt="Jeans" src="jeans.png" /> <span class="category-caption">Jeans</span> </a></div>
+<div class="category-bucket"><a href="/men/shirts"><img alt="Shirts" src="shirt.png" /> <span class="category-caption">Shirts</span> </a></div>
+<div class="category-bucket"><a href="/men/knit-sweaters"><img alt="KNITS &amp; SWEATERS" src="sweatshirt.png" /> <span class="category-caption">KNITS & SWEATERS</span> </a></div>
+</div>
+<div class="category-group btm-sec">
+<div class="category-bucket"><a href="/men/sweatshirts"><img alt="Sweatshirts" src="hoodie.png" /> <span class="category-caption">Sweatshirts</span> </a></div>
+<div class="category-bucket"><a href="/men/trousers"><img alt="Trousers" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/category-trousers.jpg" /> <span class="category-caption">Trousers</span> </a></div>
+<div class="category-bucket"><a href="/men/t-shirts"><img alt="T-shirts" src="t-shirt.png" /> <span class="category-caption">T-shirts</span> </a></div>
+<div class="category-bucket"><a href="/men/waistcoats"><img alt="Waistcoats" src="blazer.png" /> <span class="category-caption">Waistcoats</span> </a></div>
+</div>
+</div>
+</div>
+</p>
+</div>
+</div>
+<div class="r_bottom">
+<div class="l_bottom">
+</div>
+</div>
+</div>
+<div class="container_nopadding">
+<div class="controlcontent_r">
+<div class="htmlbucket">
+<p>
+<div class="home-widget featured-widget nutroops">
+<h2>Join the <span>#LBsquad</span></h2>
+<div class="widget-wrapper">
+<div class="nutropps-insta"><a href="/pages/join-nu-troops/pgid-1474311.aspx"><img alt="nutropps-insta" border="0" src="./jointhe.png" /></a></div>
+</div>
+</div>
+</p>
+</div>
+</div>
+<div class="r_bottom">
+<div class="l_bottom">
+</div>
+</div>
+</div>
+<div class="container_nopadding">
+<div class="controlcontent_r">
+<div class="htmlbucket">
+<p>
+<script defer src="//storage.sg.content-cdn.io/in-resources/83d4f031-05bb-494f-aa0f-ba0d3dc56d46/Plugin/owl-carousel-min.js"></script>
+<link href="//storage.sg.content-cdn.io/in-resources/83d4f031-05bb-494f-aa0f-ba0d3dc56d46/Plugin/owl-carousel-min.css?v-v01" rel="stylesheet" type="text/css" />
+<div class="home-widget journal-widget">
+<h2 class="heading">#LBSquad</h2>
+<div class="widget-wrapper">
+<div class="journal-display owl-carousel">
+<div class="journal-bucket"><a><img alt="ANKIT-CHOPRA" src="lbsquad1.png" /></a> 
+<ul>
+<li class="one">
+<div class="popover"><a href="/men/jackets"><span class="product-title">Men's Full Sleeve Jacket</span> <span class="product-view">View Details</span></a></div>
+</li>
+<li class="two">
+<div class="popover"><a href="/men/jeans"><span class="product-title">Men's Classic Slim Fit Jeans</span> <span class="product-view">View Details</span></a></div>
+</li>
+</ul>
+</div>
+<div class="journal-bucket"><a><img alt="Nikhil" src="lbsquad2.png" /></a> 
+<ul>
+<li class="three">
+<div class="popover"><a href="/men/sweatshirts"><span class="product-title">Men's Sweatshirts</span> <span class="product-view">View Details</span></a></div>
+</li>
+<li class="four">
+<div class="popover" style="left: -130px;"><a href="/men/jackets"><span class="product-title">Men's Jackets</span> <span class="product-view">View Details</span></a></div>
+</li>
+</ul>
+</div>
+<div class="journal-bucket"><a><img alt="Ankita-Dabral" src="lbsquad3.png" /></a> 
+<ul>
+<li class="five">
+<div class="popover"><a href="/women/knit-sweaters"><span class="product-title">Women's knits Sweaters</span> <span class="product-view">View Details</span></a></div>
+</li>
+<li class="six">
+<div class="popover"><a href="/women/jeans"><span class="product-title">Women's Jeans</span> <span class="product-view">View Details</span></a></div>
+</li>
+</ul>
+</div>
+<div class="journal-bucket"><a href="#"><img alt="Kratika" src="lbsquad4.png" /></a> 
+<ul>
+<li class="seven">
+<div class="popover"><a href="/women/t-shirts"><span class="product-title">Women's T-shirts</span> <span class="product-view">View Details</span></a></div>
+</li>
+<li class="eight">
+<div class="popover"><a href="/women/jeans"><span class="product-title">Women's Jeans</span> <span class="product-view">View Details</span></a></div>
+</li>
+</ul>
+</div>
+<div class="journal-bucket"><a href="#"><img alt="ankit-chopra" src="lbsquad5.png" /></a> 
+<ul>
+<li class="nine">
+<div class="popover"><a href="/men/sweatshirts"><span class="product-title">Men's Sweatshirts</span> <span class="product-view">View Details</span></a></div>
+</li>
+<li class="ten">
+<div class="popover"><a href="/men/jeans"><span class="product-title">Men's Classic Slim Fit Jeans</span> <span class="product-view">View Details</span></a></div>
+</li>
+</ul>
+</div>
+<div class="journal-bucket"><a href="#"><img alt="Nikhil-Kumar" src="lbsquad6.png" /></a> 
+<ul>
+<li class="eleven">
+<div class="popover"><a href="/men/knit-sweaters"><span class="product-title">Men's Sweaters</span> <span class="product-view">View Details</span></a></div>
+</li>
+<li class="tweleve">
+<div class="popover"><a href="/men/jeans"><span class="product-title">Men's Jeans</span> <span class="product-view">View Details</span></a></div>
+</li>
+</ul>
+</div>
+<div class="journal-bucket"><a href="#"><img alt="Saumya-Awasthi" src="lbsquad7.png" /></a> 
+<ul>
+<li class="thirteen">
+<div class="popover" style="left: -140px;"><a href="/women/sweatshirts"><span class="product-title">Women's Sweatshirts</span> <span class="product-view">View Details</span></a></div>
+</li>
+<li class="fourteen">
+<div class="popover"><a href="/women/jeans"><span class="product-title">Women's Jeans</span> <span class="product-view">View Details</span></a></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$( document ).ready(function() {
+    $(".journal-display").owlCarousel({
+        loop: false,
+        nav: true,
+        arrows: true,
+        dots: false,
+        items: 4,
+        slideBy: "page",
+		
+		responsive: {
+            0: {
+                items: 2,
+                margin: 10,
+                stagePadding: 0,
+                 loop: true
+                 },
+            480: {
+                
+                                items: 2,
+                                margin: 10,
+                                autoWidth: false,
+								 stagePadding:0,
+                
+                            },
+                
+                            760: {
+                                items: 3,
+                                margin: 10,
+                                autoWidth: false
+                            },
+                            1024: {
+                                items:4,
+                                margin: 10,
+                
+                            }
+                        },
+                
+                     
+                
+    });
+});
+</script><script>
+        $(document).ready(function() { 
+            $('.collapsible').click(function(){
+                $('.collapsible').removeClass('active');
+                $('.contents:visible').slideUp();
+                
+                if( $(this).next('.contents').is(':hidden') ){
+                    $(this).addClass('active');
+                    $(this).next('.contents:hidden').slideDown();
+                }
+                else{
+                    $('.collapsible').removeClass('active');
+                    $(this).next('.contents:hidden').slideUp();
+                }
+                
+            })
+        }); 
+    
+</script>
+<style type="text/css">.collapsible .s_tilte p {
+	background: #0072bc;
+	cursor: pointer;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 5px 0;
+	color: #fff;
+}
+.s_tilte p span {
+	transform: rotate(45deg);
+	transition: all 0.3s ease-in-out;
+}
+.collapsible.active .s_tilte p span {
+	transition: all 0.3s ease-in-out;
+	transform: rotate(0);
+}
+.s_tilte p {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 14px !important;
+}
+.contents .shop_link p {
+	padding: 5px 0 0;
+	line-height: 18px;
+}
+.contents .shop_link p a {
+	color: #0072bc;
+	padding: 0px 0;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: left;
+	text-decoration: none;
+}
+.collapsible {
+	bottom: 0;
+	width: 100%;
+	margin-top: -25px;
+}
+.home-widget.journal-widget .journal-bucket .popover a span.product-view {
+	background: #20285e;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	color: #fff;
+	width: 120px;
+	padding: 4px 0;
+	margin: 0;
+	border-radius: 4px;
+}
+.home-widget.journal-widget .journal-bucket {
+	position: relative;
+}
+.home-widget.journal-widget .journal-bucket ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.home-widget.journal-widget .journal-bucket ul li {
+	list-style: none;
+	position: absolute;
+	transition: all .25s ease-out;
+	height: 100px;
+}
+.home-widget.journal-widget .journal-bucket ul li.one {
+	top: 32%;
+	left: 46%;
+}
+.home-widget.journal-widget .journal-bucket ul li.two {
+	top: 56%;
+	left: 47%;
+}
+.home-widget.journal-widget .journal-bucket ul li.three {
+	top: 45%;
+	left: 46%;
+}
+.home-widget.journal-widget .journal-bucket ul li.four {
+	top:32%;
+	left: 60%;
+}
+.home-widget.journal-widget .journal-bucket ul li.five {
+	top: 25%;
+	left: 55%;
+}
+.home-widget.journal-widget .journal-bucket ul li.six {
+	top: 38%;
+	left: 45%;
+}
+.home-widget.journal-widget .journal-bucket ul li.seven {
+	top: 26%;
+	left: 45%;
+}
+.home-widget.journal-widget .journal-bucket ul li.eight {
+	top: 38%;
+	left:56%;
+}
+.home-widget.journal-widget .journal-bucket ul li.nine {
+	top: 10%;
+	left: 45%;
+}
+.home-widget.journal-widget .journal-bucket ul li.ten {
+	top: 42%;
+	left: 54%;
+}
+.home-widget.journal-widget .journal-bucket ul li.eleven {
+	top: 25%;
+	left: 52%;
+}
+.home-widget.journal-widget .journal-bucket ul li.tweleve {
+	top: 50%;
+	left: 44%;
+}
+.home-widget.journal-widget .journal-bucket ul li.thirteen {
+	top: 24%;
+	left: 70%;
+}
+.home-widget.journal-widget .journal-bucket ul li.fourteen {
+	top: 32%;
+	left: 50%;
+}
+.home-widget.journal-widget .journal-bucket ul li .popover {
+	width: 216.5px;
+	height: 78px;
+	background: #fff;
+	box-shadow: 0 4px 20px rgba(0,0,0,.15);
+	position: absolute;
+	left: -100px;top: 60px;
+	visibility: hidden;
+	box-sizing: border-box;
+	padding: 0;
+	z-index: 1;
+	text-decoration: none;border-radius: 4px;
+}
+.home-widget.journal-widget .journal-bucket ul li .popover a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 16px;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+.home-widget.journal-widget .journal-bucket ul li .popover::after {
+	background: url(https://storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Stylesheet/images/Nu-pophover-bullet.png) left top no-repeat;
+	width: 6px;
+	height: 12px;
+	content: "";
+	top: 44px;
+	right: 20px;
+	background-size: 100%;
+	position: absolute;
+}
+.home-widget.journal-widget .journal-bucket ul li::after {
+	position: absolute;
+	bottom: -.1em;
+	content: "";
+	width: 16px;
+	height: 16px;
+	background: #fff;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	background: url(https://storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Stylesheet/images/Nu-image-hotspot.png) left top no-repeat;
+}
+.popover .arrow {
+	position: absolute;
+	display: block;
+	background: url(https://storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Stylesheet/images/NU_popover-arrow-up.png) left top no-repeat;
+	width: 10px;
+	height: 10px;
+	top: -3px;
+	left: 45.5%;
+	transform: translateY(-50%);
+}
+.home-widget.journal-widget .journal-bucket .popover a span {
+	display: block;
+}
+.popover .product-title {
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 18px;
+	letter-spacing: .02em;
+	color: #20285e;
+	margin-bottom: 6px;
+	text-transform: uppercase;text-align: left;
+}
+.popover .product-price {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 18px;
+	letter-spacing: .02em;
+	color: #000000;text-align: left;
+}
+.home-widget.journal-widget .journal-bucket ul li:hover .popover {
+	visibility: visible;
+}
+.popover .product-price span {
+	display: inline-block !important;
+	color: #000000;
+	font-size: 18px;
+}
+
+@media screen and (min-width: 121px) and (max-width: 749px){
+
+.home-widget.journal-widget .journal-bucket ul li {
+display: none;
+}
+
+}
+</style>
+</p>
+</div>
+</div>
+<div class="r_bottom">
+<div class="l_bottom">
+</div>
+</div>
+</div>
+<div class="container_nopadding">
+<div class="controlcontent_r">
+<div class="htmlbucket">
+<p>
+<div class="home-widget store-widget psr">
+<div class="widget-wrapper">
+<p><img alt="Present in more than 150 stores in india" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/present-storein-india-icon.svg" /><span class="psr-content">Present in more than<br/>
+350 stores in india</span></p>
+<p><img alt="100% secure payments" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/secure-payment-icon.svg" /><span class="psr-content">100% secure<br/>
+payments</span></p>
+<p><img alt="10 days easy returns & refunds" src="//storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/easy-return-exchange-icon.svg" /><span class="psr-content">10 days easy<br/>
+returns & refunds</span></p>
+</div>
+</div>
+</p>
+</div>
+</div>
+<div class="r_bottom">
+<div class="l_bottom">
+</div>
+</div>
+</div>
+<div class="container_nopadding">
+<div class="controlcontent_r">
+<div class="htmlbucket">
+<p>
+<div class="home-widget seo-widget">
+<div class="widget-wrapper">
+<div class="seo-block">
+<div class="heading"></div>
+</div>
+</div>
+</div>
+</p>
+</div>
+</div>
+<div class="r_bottom">
+<div class="l_bottom">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col2_T04">
+<div class="col2_content_T04">
+</div>
+</div>
+<div class="col3_T04">
+<div class="col3_content_T04">
+</div>
+</div>
+</div>
+</div>
+<div id="footer" style="padding-bottom: 5px;">
+<div style="clear:both;">
+<div class="bottombartop_r">
+<div class="bottombartop_l"></div>
+</div>
+<div class="bottombarmiddle_r">
+<div class="bottombarmiddle_l">
+<center>
+</center>
+<div class="storeaddress"><div class="popcont"><span class="poptitle">Popular Searches:</span> <span class="popdetail"> <a href="https:///men/jeans">Men's Jeans</a> <a href="https://Londonberry/men/t-shirts">Men's T Shirts</a> <a href="https://Londonberry/men/shirts">Men's Shirts </a> <a href="https://Londonberry/men/jackets">Men's Jackets</a> <a href="https://Londonberry/women/jeans">Women's Jeans</a> </span></div>
+<div class="footer-wrapper">
+<div class="site-logo"><a href="/"><img alt="numerounojeanswear" class="logo new-logo" height="80" src="./logo.png" title width="auto" /> </a></div>
+<div class="footerlinks">
+<div class="col">
+<div class="heading ">Important links</div>
+<ul>
+<li><a href="/join-nu-troops">join lbsquad</a></li>
+<li><a href="/sale">Sale</a></li>
+<li><a href="/all-products">All products</a></li>
+<li><a href="/store-locator">Find a store</a></li>
+<li><a href="/career">career</a></li>
+<li><a href="/blog">Blog</a></li>
+<li><a href="/sitemap.aspx">Sitemap</a></li>
+</ul>
+</div>
+<div class="col">
+<div class="heading ">Customer Support</div>
+<ul>
+<li><a href="/about-us">About us</a></li>
+<li><a href="/contact-us">Contact</a></li>
+<li><a href="/return-exchange-policy">Return & exchanges</a></li>
+<li><a href="/trackorder.aspx">track order</a></li>
+<li><a href="/terms-of-service">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="last-col">
+<div class="newsleter">
+<div class="heading">Subscribe to our brand journal</div>
+<p>Sign up to know about our new arrivals, latest collections, offers and much more.</p>
+<div class="subscription"></div>
+</div>
+<div class="social">
+<div class="heading accordion-ft">Social Media links</div>
+<div class="social-links"><a href="https://www.facebook.com/numerounojeanswear" target="_blank"><img alt="facebook" src="//martjackstorage.blob.core.windows.net/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/facebook_ft.svg" /></a> <a href="https://www.instagram.com/numerounojeanswear/" target="_blank"><img alt="instagram" src="//martjackstorage.blob.core.windows.net/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/insta_ft.svg" /> </a> <a href="https://twitter.com/numerounojw?lang=en" target="_blank"><img alt="twitter" src="//martjackstorage.blob.core.windows.net/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/twitter_ft.svg" /></a> <a href="https://www.linkedin.com/company/numero-uno-clothing-ltd./" target="_blank"><img alt="linkedin" src="//martjackstorage.blob.core.windows.net/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/linkedin_ft.png" /></a> <a href="https://www.youtube.com/channel/UCTRFjpZI5KbIQ0q7Melhfww" target="_blank"><img alt="youtube" src="//martjackstorage.blob.core.windows.net/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Images/userimages/home-banner/youtube_ft.svg" /></a></div>
+</div>
+</div>
+</div>
+<div class="copy-content">All rights reserved © London berry</div>
+<p><a class="gtp" id="toTop" style="none">Go To top</a> <script>
+    $(function(){
+        var cUrl = window.location.href;
+         $(".l2_inner_ul a").each(function(){
+                 if ($(this).attr("href") == cUrl){
+                         $(this).addClass("is-selected");
+                 }
+         });
+    });
+</script>
+<style type="text/css">a.secondlvlmenu.is-selected {
+    color: #EB5757 !important;
+}
+.gtp { background: #20285E;border-radius: 3px;bottom: 20px;font-size: 0;height: 30px;position: fixed;right: 20px;width: 30px;z-index: 999;}
+.gtp::before {border-right: 2px solid #ffffff;border-top: 2px solid #ffffff;bottom: 0;content: "";height: 7px; left: 0;margin: auto; position: absolute; right: 0; top: 3px; -moz-transform: rotate(-45deg);-webkit-transform: rotate(-45deg);-o-transform: rotate(-45deg);-ms-transform: rotate(-45deg); transform: rotate(-45deg); width: 7px;}
+</style>
+<script>
+$( document ).ajaxStop(function() {
+ if($(window).width() >= 1024){
+setTimeout(function() {
+               $('.quick_cart.cart-close').fadeOut();
+            }, 2500);
+}
+});
+
+$(window).scroll(function(){
+    if($(this).scrollTop()){
+        $('#toTop').fadeIn();
+    }
+    else{
+        $('#toTop').fadeOut();
+    }
+});
+
+$(document).ready(function() {
+
+$("#toTop").click(function(){
+    $("html, body").animate({scrollTop:0},1000);
+});
+});
+</script></p></div>
+</div>
+</div>
+<div class="bottombarbottom_r">
+<div class="bottombarbottom_l"></div>
+</div>
+</div>
+<div id="ctl00_pnlPoweredByLogo" class="martjacklogo">
+<a id="ctl00_lnkPoweredby" title="eCommerce platform" href="https://www.capillarytech.com/products/anywhere-commerce-plus/anywhere-commerce" target="_blank"></a>
+</div>
+</div>
+<a class="exit-off-canvas"></a>
+</div>
+</center>
+</div>
+</div>
+</center>
+<a id="ctl00_lnkAuthen" href="javascript:__doPostBack(&#39;ctl00$lnkAuthen&#39;,&#39;&#39;)"></a>
+<a id="ctl00_lnkregAuthen" href="javascript:__doPostBack(&#39;ctl00$lnkregAuthen&#39;,&#39;&#39;)"></a>
+</div>
+<div id="divCompPop" style="display: none;">
+</div>
+<div id="divScriptBlock">
+</div>
+<input type="hidden" name="ctl00$ctl00_Searchbox_hdnincategory" id="ctl00_Searchbox_hdnincategory" />
+<input type="hidden" name="ctl00$ctl00_Searchbox_hdnSearchTreeJSONString" id="ctl00_Searchbox_hdnSearchTreeJSONString" />
+</form>
+<script type="text/javascript" async src="https://storage.sg.content-cdn.io/in-resources/1665f289-f3fd-4844-a3ba-644cef519e51/Plugin/CustomScript.js?v=v677"></script><script type="text/javascript" async src="https://Londonberry/service-worker.js?v=v1"></script>
+</body>
+</html>
